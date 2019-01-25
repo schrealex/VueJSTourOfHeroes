@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import MessageService from "../services/MessageService";
+import MessageService from '../services/MessageService';
 
 export default {
-  name: "Messages",
-  props: ["hero"],
+  name: 'Messages',
+  props: ['hero'],
   data() {
     return {
-      messageService: MessageService
+      messageService: MessageService,
     };
-  }
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 h2 {
   color: red;
   font-family: Arial, Helvetica, sans-serif;
@@ -43,7 +43,6 @@ button.clear {
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
-  cursor: hand;
 }
 button:hover {
   background-color: #cfd8dc;

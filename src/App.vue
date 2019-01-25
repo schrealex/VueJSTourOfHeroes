@@ -12,12 +12,12 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      title: "Tour of Heroes"
+      title: 'Tour of Heroes',
     };
-  }
+  },
 };
 </script>
 

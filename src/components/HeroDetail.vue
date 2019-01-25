@@ -14,32 +14,34 @@
 </template>
 
 <script>
-import HeroService from "../services/HeroService";
+import HeroService from '../services/HeroService';
 
 export default {
-  name: "HeroDetail",
-  created: function() {
+  name: 'HeroDetail',
+  created() {
     this.getHero();
   },
   data() {
     return {
-      hero: null
+      hero: null,
     };
   },
   methods: {
     getHero() {
       const id = +this.$route.params.id;
-      HeroService.getHero(id).subscribe(hero => this.hero = hero);
+      HeroService.getHero(id).subscribe((hero) => {
+        this.hero = hero;
+      });
     },
     goBack() {
-      this.$router.push('/')
-    }
-  }
+      this.$router.push('/');
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 label {
-  font-size: 12 px;
+  font-size: 12px;
 }
 </style>

@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export class Hero {
   constructor(id, name) {
     this.id = id;
@@ -5,7 +6,7 @@ export class Hero {
   }
 
   toString() {
-    return this.id + " " + this.name;
+    return `${this.id} ${this.name}`;
   }
 
   // and so on, put other methods here

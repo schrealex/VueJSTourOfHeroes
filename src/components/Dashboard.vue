@@ -17,43 +17,35 @@
 </template>
 
 <script>
-import HeroService from "../services/HeroService";
+import HeroService from '../services/HeroService';
 
 export default {
-  name: "dashboard",
+  name: 'dashboard',
   data() {
     return {
       loading: false,
-      heroes: null
+      heroes: null,
     };
   },
-  created: function() {
-    this.getHeroes()
-  },
-  // watch: {
-  //   $route() {
-  //     this.getHeroes();
-  //   }
-  // },
-  watch: {
-    '$route' : 'getHeroes'
+  created() {
+    this.getHeroes();
   },
   methods: {
     onSelect(hero) {
       this.selectedHero = hero;
     },
     getHeroes() {
-      this.loading = true
-      HeroService.getHeroes().subscribe(heroes => {
-        this.heroes = heroes.slice(1, 5)
-        this.loading = false
-      })      
-    }
-  }
+      this.loading = true;
+      HeroService.getHeroes().subscribe((heroes) => {
+        this.heroes = heroes.slice(1, 5);
+        this.loading = false;
+      });
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 [class*="col-"] {
   float: left;
   padding-right: 20px;

@@ -12,29 +12,29 @@
 </template>
 
 <script>
-import HeroService from "../services/HeroService";
+import HeroService from '../services/HeroService';
 
 export default {
-  name: "heroes",
-  created: function() {
+  name: 'heroes',
+  created() {
     this.getHeroes();
   },
   data() {
     return {
-      heroes: null
+      heroes: null,
     };
   },
   methods: {
     getHeroes() {
-      HeroService.getHeroes().subscribe(heroes => {
+      HeroService.getHeroes().subscribe((heroes) => {
         this.heroes = heroes;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   .selected {
     background-color: #CFD8DC !important;
     color: white;
@@ -94,7 +94,7 @@ export default {
       position: relative;
       display: block;
       width: 250px;
-      
+
       &:hover {
         color:#607D8B;
       }
